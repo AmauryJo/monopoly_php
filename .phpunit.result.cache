@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Tests\\DicesTest::testRoll":7,"Tests\\DicesTest::testTotal":7,"Tests\\DicesTest::testIsDouble":8},"times":{"Tests\\DiceTest::testNumberOfFaces":0.003,"Tests\\DiceTest::testRoll":0,"Tests\\DicesTest::testRoll":0,"Tests\\DicesTest::testTotal":0,"Tests\\DicesTest::testNumberOfFaces":0,"Tests\\DicesTest::testIsDouble":0}}

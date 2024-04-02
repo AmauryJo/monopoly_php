@@ -27,4 +27,16 @@ class Dices {
         return $this->dice1->getValue() == $this->dice2->getValue();
     }
 
+    public function getNbFaces()
+    {
+        return $this->dice1->getNbFace();
+        return $this->dice2->getNbFace();
+    }
+
+    public function getTotal()
+    {
+        $this->dice1->getValue();
+        $this->dice2->getValue();
+        return $this->result;
+    }
 }
