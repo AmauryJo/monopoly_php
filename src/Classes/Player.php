@@ -29,12 +29,12 @@ class Player {
         return $this->balance;
     }
     
-    public function addProperty($amount) :int
+    public function addProperty($amount)
     {
 
     }
 
-    public function removeProperties($amount) :int
+    public function removeProperties($amount)
     {
 
     }
