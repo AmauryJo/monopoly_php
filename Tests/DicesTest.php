@@ -17,8 +17,8 @@ final class DicesTest extends TestCase
         // le nombre généré est bien de type "int"
         $total = $dices->roll();
         $this->assertTrue(gettype($total) == "integer");
-        // le nombre généré doit être entre 1 et le nombre de face du dé et il est return
-        $this->assertTrue($total >= 1 && $total <= $dices->getNbFaces());
+        // le nombre généré doit être entre 2 et le nombre de face du dé et il est return
+        $this->assertTrue($total >= 2 && $total <= $dices->getNbFaces());
         // le nombre généré est dans $this->value
         $this->assertTrue($total == $dices->getTotal());
         // le nombre généré est  aléatoire
@@ -34,16 +34,16 @@ final class DicesTest extends TestCase
         }
         $this->assertTrue($result);
     }
- 
-    // public function testTotal(): void
-    // {
-    //     $dices = new Dices();
-    //     // le nombre généré est bien de type "int"
-    //     $total = $dices->roll();
-    //     $this->assertTrue(gettype($total) == "integer");
-    //     // le nombre généré doit être entre 1 et le nombre de face du dé X2 et il est retourné
-    //     $this->assertTrue($total >= 1 && $total <= $dices->getNbFaces());
-    // }
+
+    public function testTotal(): void
+    {
+        $dices = new Dices();
+        // le nombre généré est bien de type "int"
+        $total = $dices->roll();
+        $this->assertTrue(gettype($total) == "integer");
+        // le nombre généré doit être entre 2 et le nombre de face du dé X2 et il est retourné
+        $this->assertTrue($total >= 2 && $total <= $dices->getNbFaces());
+    }
  
     // public function testNumberOfFaces(): void
     // {
@@ -51,13 +51,13 @@ final class DicesTest extends TestCase
     //     $this->assertSame($dices->dice1->getNbFace() + $dices->dice2->getNbFace(), 12);
     // }
  
-    // public function testIsDouble(): void
-    // {
-    //     $dices = new Dices();
+    public function testIsDouble(): void
+    {
+        $dices = new Dices();
  
-    //     $dices->dice1->setValue(3);
-    //     $dices->dice2->setValue(3);
+        $dices->dice1->setValue(4);
+        $dices->dice2->setValue(4);
  
-    //     $this->assertTrue($dices->is_double());
-    // }
+        $this->assertTrue($dices->is_double());
+    }
 }

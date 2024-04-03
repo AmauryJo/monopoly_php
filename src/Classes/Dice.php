@@ -28,7 +28,7 @@ class Dice implements InterfaceDice {
     }
 
     /**
-     * Non existance du setter car pas besoin de modifier le $nbFace pendant une partie ou après la création du dé
+     * Non existace du setter car pas besoin de modifier le $nbFace pendant une partie ou après la création du dé
      *
      * @param [type] $newValue
      * @return void
@@ -42,6 +42,14 @@ class Dice implements InterfaceDice {
     {
         return $this->value;
     }
+
+    // Attribue au dé la valeur en paramètre
+    public function setValue($valeur): int
+    {
+       return $this->value=$valeur;
+    }
+
+
 
     // Imaginons que je veuille que ça soit possible
     // public function setValue(int $newValue): void

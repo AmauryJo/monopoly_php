@@ -29,8 +29,9 @@ class Dices {
 
     public function getNbFaces()
     {
-        return $this->dice1->getNbFace();
-        return $this->dice2->getNbFace();
+        $this->dice1->getNbFace();
+        $this->dice2->getNbFace();
+        return $this->result;
     }
 
     public function getTotal()
@@ -39,4 +40,5 @@ class Dices {
         $this->dice2->getValue();
         return $this->result;
     }
+    
 }
