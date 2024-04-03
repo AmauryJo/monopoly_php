@@ -27,6 +27,11 @@ class Player {
         return $this->name;
     }
 
+    public function isJailed() :bool
+    {
+        return $this->isJailed;
+    }
+
     public function incrBalance($amount, $from) :int
     {
         $this->balance =+ $amount;
@@ -35,23 +40,26 @@ class Player {
 
     public function decrBalance($amount, $to) :int
     {
-        $this->balance =- $amount;
-        return $this->balance;
+        $tempBalance = $this->balance =- $amount;
+
+        if ($tempBalance < 0){
+            throw new \RuntimeException('Solde non suffisant');
+        }
+        else{
+            $this->balance =- $amount;
+            return $this->balance;
+        }
+
     }
     
-    public function addProperty($)
-    {
-        $this->properties.array_push()
-    }
-
-    public function removeProperties($)
+    public function addProperty()
     {
 
     }
 
-    public function isJailed() :bool
+    public function removeProperties()
     {
-        return $this->isJailed;
+
     }
 
     public function jailPlayer()
@@ -63,9 +71,4 @@ class Player {
     {
         $this->isJailed = false;
     }
-
-
-
-
-
 }
