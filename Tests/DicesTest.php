@@ -45,12 +45,6 @@ final class DicesTest extends TestCase
         $this->assertTrue($total >= 2 && $total <= $dices->getNbFaces());
     }
  
-    // public function testNumberOfFaces(): void
-    // {
-    //     $dices = new Dices();
-    //     $this->assertSame($dices->dice1->getNbFace() + $dices->dice2->getNbFace(), 12);
-    // }
- 
     public function testIsDouble(): void
     {
         $dices = new Dices();
