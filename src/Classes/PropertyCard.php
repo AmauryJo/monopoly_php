@@ -2,7 +2,7 @@
 
 namespace App\Classes;
 
-class Property {
+class PropertyCard {
     public string $name;
     public int $price;
     public int $rentPrice;

@@ -17,6 +17,16 @@ class Player {
         $this->isJailed = false;
     }
 
+    public function getBalance() :int
+    {
+        return $this->balance;
+    }
+
+    public function getName() :int
+    {
+        return $this->name;
+    }
+
     public function incrBalance($amount, $from) :int
     {
         $this->balance =+ $amount;
@@ -29,12 +39,12 @@ class Player {
         return $this->balance;
     }
     
-    public function addProperty($amount)
+    public function addProperty($)
     {
-
+        $this->properties.array_push()
     }
 
-    public function removeProperties($amount)
+    public function removeProperties($)
     {
 
     }
